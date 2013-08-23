@@ -25,6 +25,8 @@
 		1FCB388B17C6669500A9A13A /* RecordingDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388A17C6669500A9A13A /* RecordingDatabase.m */; };
 		1FCB388D17C6673800A9A13A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCB388C17C6673800A9A13A /* CoreData.framework */; };
 		1FCB389017C679F900A9A13A /* RecordingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */; };
+		78ECEDE717C7564300800F65 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78ECEDE617C7564300800F65 /* PlayerViewController.m */; };
+		78ECEDE917C75C4400800F65 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 78ECEDE817C75C4400800F65 /* Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		1FCB388C17C6673800A9A13A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1FCB388E17C679F900A9A13A /* RecordingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingHistoryViewController.h; sourceTree = "<group>"; };
 		1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingHistoryViewController.m; sourceTree = "<group>"; };
+		78ECEDE517C7564300800F65 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		78ECEDE617C7564300800F65 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		78ECEDE817C75C4400800F65 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = VoicePrototype/Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		1F8E054817C0C8A00079169D = {
 			isa = PBXGroup;
 			children = (
+				78ECEDE817C75C4400800F65 /* Images */,
 				1F8E055A17C0C8A00079169D /* VoicePrototype */,
 				1F8E055317C0C8A00079169D /* Frameworks */,
 				1F8E055217C0C8A00079169D /* Products */,
@@ -122,6 +128,8 @@
 				1FCB388717C6646B00A9A13A /* Recording.m */,
 				1FCB388E17C679F900A9A13A /* RecordingHistoryViewController.h */,
 				1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */,
+				78ECEDE517C7564300800F65 /* PlayerViewController.h */,
+				78ECEDE617C7564300800F65 /* PlayerViewController.m */,
 			);
 			path = VoicePrototype;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 				1F8E056717C0C8A00079169D /* Default.png in Resources */,
 				1F8E056917C0C8A00079169D /* Default@2x.png in Resources */,
 				1F8E056B17C0C8A00079169D /* Default-568h@2x.png in Resources */,
+				78ECEDE917C75C4400800F65 /* Images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +223,7 @@
 				1FCB388817C6646B00A9A13A /* Recording.m in Sources */,
 				1FCB388B17C6669500A9A13A /* RecordingDatabase.m in Sources */,
 				1FCB389017C679F900A9A13A /* RecordingHistoryViewController.m in Sources */,
+				78ECEDE717C7564300800F65 /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

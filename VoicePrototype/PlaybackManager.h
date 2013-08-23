@@ -8,11 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const PlaybackManagerDidStartPlayingNotification;
+extern NSString * const PlaybackManagerDidStopPlayingNotification;
+extern NSString * const PlaybackManagerDidPausePlayingNotification;
+
 @interface PlaybackManager : NSObject
 
 + (id)sharedManager;
 - (void)playWithURL:(NSURL*)url;
 - (void)pause;
 - (void)stop;
+- (NSTimeInterval)currentTime;
+- (NSTimeInterval)duration;
+- (NSString*)durationPast;
+- (NSString*)durationLeft;
+- (BOOL)isPlaying;
 
 @end

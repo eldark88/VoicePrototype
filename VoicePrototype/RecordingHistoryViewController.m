@@ -12,6 +12,7 @@
 #import "Recording.h"
 #import "PlaybackManager.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PlayerViewController.h"
 
 @interface RecordingHistoryViewController ()
 
@@ -19,6 +20,7 @@
 @property(nonatomic,retain)RecordingDatabase *recordingDatabase;
 @property(nonatomic,retain)UITableView *tableView;
 @property(nonatomic,retain)UIButton *recordButton;
+@property(nonatomic,retain)PlayerViewController *playerViewController;
 
 - (void)didClickRecordButton:(id)sender;
 
@@ -30,6 +32,7 @@
 @synthesize recordingDatabase;
 @synthesize tableView;
 @synthesize recordButton;
+@synthesize playerViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -92,6 +95,17 @@
     recordings = [recordingDatabase.managedObjectContext executeFetchRequest:recordingFetchRequest error:nil];
     
     [self.tableView reloadData];
+    
+    
+    
+    
+    playerViewController = [[PlayerViewController alloc] init];
+    CGRect frame = playerViewController.view.frame;
+    frame.size.height = 100.0f;
+    frame.origin.y = 480.0f - frame.size.height;
+    playerViewController.view.frame = frame;
+    
+    [self.view addSubview:playerViewController.view];
 }
 
 - (void)didReceiveMemoryWarning
