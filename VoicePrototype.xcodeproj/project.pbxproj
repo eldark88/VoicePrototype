@@ -20,6 +20,11 @@
 		1F8E058117C0D8900079169D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E058017C0D8900079169D /* AVFoundation.framework */; };
 		1F8E058417C0E2DA0079169D /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E058317C0E2DA0079169D /* RecorderViewController.m */; };
 		1F8F7A2917C28180008A3AB4 /* PlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F7A2817C28180008A3AB4 /* PlaybackManager.m */; };
+		1FCB388517C6637A00A9A13A /* recordingdatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388317C6637A00A9A13A /* recordingdatamodel.xcdatamodeld */; };
+		1FCB388817C6646B00A9A13A /* Recording.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388717C6646B00A9A13A /* Recording.m */; };
+		1FCB388B17C6669500A9A13A /* RecordingDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388A17C6669500A9A13A /* RecordingDatabase.m */; };
+		1FCB388D17C6673800A9A13A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCB388C17C6673800A9A13A /* CoreData.framework */; };
+		1FCB389017C679F900A9A13A /* RecordingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,14 @@
 		1F8E058317C0E2DA0079169D /* RecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderViewController.m; sourceTree = "<group>"; };
 		1F8F7A2717C28180008A3AB4 /* PlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackManager.h; sourceTree = "<group>"; };
 		1F8F7A2817C28180008A3AB4 /* PlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackManager.m; sourceTree = "<group>"; };
+		1FCB388417C6637A00A9A13A /* recordingdatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recordingdatamodel.xcdatamodel; sourceTree = "<group>"; };
+		1FCB388617C6646B00A9A13A /* Recording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recording.h; sourceTree = "<group>"; };
+		1FCB388717C6646B00A9A13A /* Recording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recording.m; sourceTree = "<group>"; };
+		1FCB388917C6669500A9A13A /* RecordingDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingDatabase.h; sourceTree = "<group>"; };
+		1FCB388A17C6669500A9A13A /* RecordingDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingDatabase.m; sourceTree = "<group>"; };
+		1FCB388C17C6673800A9A13A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1FCB388E17C679F900A9A13A /* RecordingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingHistoryViewController.h; sourceTree = "<group>"; };
+		1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCB388D17C6673800A9A13A /* CoreData.framework in Frameworks */,
 				1F8E058117C0D8900079169D /* AVFoundation.framework in Frameworks */,
 				1F8E055517C0C8A00079169D /* UIKit.framework in Frameworks */,
 				1F8E055717C0C8A00079169D /* Foundation.framework in Frameworks */,
@@ -80,6 +94,7 @@
 		1F8E055317C0C8A00079169D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FCB388C17C6673800A9A13A /* CoreData.framework */,
 				1F8E058017C0D8900079169D /* AVFoundation.framework */,
 				1F8E055417C0C8A00079169D /* UIKit.framework */,
 				1F8E055617C0C8A00079169D /* Foundation.framework */,
@@ -91,6 +106,8 @@
 		1F8E055A17C0C8A00079169D /* VoicePrototype */ = {
 			isa = PBXGroup;
 			children = (
+				1FCB388917C6669500A9A13A /* RecordingDatabase.h */,
+				1FCB388A17C6669500A9A13A /* RecordingDatabase.m */,
 				1F8E056317C0C8A00079169D /* AppDelegate.h */,
 				1F8E056417C0C8A00079169D /* AppDelegate.m */,
 				1F8E055B17C0C8A00079169D /* Supporting Files */,
@@ -100,6 +117,11 @@
 				1F8E058317C0E2DA0079169D /* RecorderViewController.m */,
 				1F8F7A2717C28180008A3AB4 /* PlaybackManager.h */,
 				1F8F7A2817C28180008A3AB4 /* PlaybackManager.m */,
+				1FCB388317C6637A00A9A13A /* recordingdatamodel.xcdatamodeld */,
+				1FCB388617C6646B00A9A13A /* Recording.h */,
+				1FCB388717C6646B00A9A13A /* Recording.m */,
+				1FCB388E17C679F900A9A13A /* RecordingHistoryViewController.h */,
+				1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */,
 			);
 			path = VoicePrototype;
 			sourceTree = "<group>";
@@ -188,6 +210,10 @@
 				1F8E057F17C0D8050079169D /* RecordingManager.m in Sources */,
 				1F8E058417C0E2DA0079169D /* RecorderViewController.m in Sources */,
 				1F8F7A2917C28180008A3AB4 /* PlaybackManager.m in Sources */,
+				1FCB388517C6637A00A9A13A /* recordingdatamodel.xcdatamodeld in Sources */,
+				1FCB388817C6646B00A9A13A /* Recording.m in Sources */,
+				1FCB388B17C6669500A9A13A /* RecordingDatabase.m in Sources */,
+				1FCB389017C679F900A9A13A /* RecordingHistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +331,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FCB388317C6637A00A9A13A /* recordingdatamodel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FCB388417C6637A00A9A13A /* recordingdatamodel.xcdatamodel */,
+			);
+			currentVersion = 1FCB388417C6637A00A9A13A /* recordingdatamodel.xcdatamodel */;
+			path = recordingdatamodel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1F8E054917C0C8A00079169D /* Project object */;
 }

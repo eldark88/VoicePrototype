@@ -16,6 +16,7 @@
 - (void)pauseRecording;
 - (void)cancelRecording;
 - (NSTimeInterval)recordingTime;
+- (NSString*)recordingTimeString;
 - (BOOL)isRecording;
 - (NSError*)error;
 - (NSURL*)url;

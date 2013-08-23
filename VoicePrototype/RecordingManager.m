@@ -8,12 +8,17 @@
 
 #import "RecordingManager.h"
 #import <AVFoundation/AVFoundation.h>
+#import <CoreData/CoreData.h>
+#import "Recording.h"
+#import "RecordingDatabase.h"
 
 @interface RecordingManager ()
 
 @property(nonatomic,retain)AVAudioRecorder *audioRecorder;
 @property(nonatomic,retain)NSURL *currentURL;
 @property(nonatomic,retain)NSError *error;
+@property(nonatomic)NSTimeInterval pausedTime;
+@property(nonatomic,retain)RecordingDatabase *recordingDatabase;
 
 - (NSURL*)generateNewURL;
 - (AVAudioRecorder*)createAudioRecorder;
@@ -25,6 +30,8 @@
 @synthesize audioRecorder;
 @synthesize currentURL;
 @synthesize error;
+@synthesize pausedTime;
+@synthesize recordingDatabase;
 
 + (id)sharedManager {
     static RecordingManager *sharedRecordingManager = nil;
@@ -39,6 +46,7 @@
 {
     self = [super init];
     if (self) {
+        recordingDatabase = [[RecordingDatabase alloc] init];
     }
     return self;
 }
@@ -52,33 +60,68 @@
     
     [self createAudioRecorder];
     
-    [audioRecorder record];
+    NSLog(@"audioRecorder.currentTime = %f", pausedTime);
+    if (pausedTime) {
+        [audioRecorder recordAtTime: pausedTime];
+    }
+    else {
+        [audioRecorder record];
+    }
 }
 
 - (void)stopRecording
 {
-    if (audioRecorder.recording) {
+    NSTimeInterval duration = [self recordingTime];
+    //if (audioRecorder.recording) {
         [audioRecorder stop];
-    }
+        pausedTime = 0.0f;
+    //}
+    
+    Recording * recording = [NSEntityDescription insertNewObjectForEntityForName: @"Recording" inManagedObjectContext: self.recordingDatabase.managedObjectContext];
+    recording.url = [currentURL absoluteString];
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    recording.title = [dateFormatter stringFromDate:[NSDate date]];
+ 
+    recording.duration = [NSNumber numberWithDouble:duration];
+    recording.date = [NSDate date];
+    
+    [self.recordingDatabase.managedObjectContext save:nil];
 }
 
 - (void)pauseRecording
 {
     if (audioRecorder.recording) {
+        pausedTime = [self recordingTime];
         [audioRecorder pause];
     }
 }
 
 - (void)cancelRecording
 {
-    if (audioRecorder.recording) {
+    //if (audioRecorder.recording) {
+        [audioRecorder stop];
         [audioRecorder deleteRecording];
-    }
+        pausedTime = 0.0f;
+    //}
 }
 
 - (NSTimeInterval)recordingTime
 {
-    return audioRecorder.currentTime;
+    return pausedTime + audioRecorder.currentTime;
+}
+
+-(NSString *)recordingTimeString
+{
+    NSTimeInterval interval = [self recordingTime];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:interval];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    
+    return formattedDate;
 }
 
 - (BOOL)isRecording
