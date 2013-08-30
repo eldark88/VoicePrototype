@@ -12,6 +12,8 @@
 NSString * const PlaybackManagerDidStartPlayingNotification = @"PlaybackManagerDidStartPlayingNotification";
 NSString * const PlaybackManagerDidStopPlayingNotification = @"PlaybackManagerDidStopPlayingNotification";
 NSString * const PlaybackManagerDidPausePlayingNotification = @"PlaybackManagerDidPausePlayingNotification";
+NSString * const PlaybackManagerDidFinishPlayingNotification = @"PlaybackManagerDidFinishPlayingNotification";
+NSString * const PlaybackManagerErrorPlayingNotification = @"PlaybackManagerErrorPlayingNotification";
 
 @interface PlaybackManager ()
 
@@ -44,11 +46,19 @@ NSString * const PlaybackManagerDidPausePlayingNotification = @"PlaybackManagerD
     
     NSError *localError = nil;
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&localError];
+    audioPlayer.delegate = self;
     error = localError;
     
     [audioPlayer play];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:PlaybackManagerDidStartPlayingNotification object:nil];
+}
+
+- (void)play
+{
+    if (!audioPlayer.playing) {
+        [audioPlayer play];
+    }
 }
 
 - (void)pause
@@ -72,12 +82,17 @@ NSString * const PlaybackManagerDidPausePlayingNotification = @"PlaybackManagerD
     return audioPlayer.currentTime;
 }
 
+- (void)setCurrentTime:(NSTimeInterval)currentTime
+{
+    audioPlayer.currentTime = currentTime;
+}
+
 - (NSTimeInterval)duration
 {
     return audioPlayer.duration;
 }
 
-- (NSString*)durationPast
+- (NSString*)durationPastLabel
 {
     //NSLog(@"currentTime = %f, duration = %f", self.currentTime, self.duration);
     NSDate *durationDate = [NSDate dateWithTimeIntervalSince1970:self.currentTime];
@@ -86,9 +101,17 @@ NSString * const PlaybackManagerDidPausePlayingNotification = @"PlaybackManagerD
     return [dateFormatter stringFromDate:durationDate];
 }
 
-- (NSString*)durationLeft
+- (NSString*)durationLeftLabel
 {
     NSDate *durationDate = [NSDate dateWithTimeIntervalSince1970:self.duration-self.currentTime];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"mm:ss"];
+    return [dateFormatter stringFromDate:durationDate];
+}
+
+- (NSString*)durationLabel
+{
+    NSDate *durationDate = [NSDate dateWithTimeIntervalSince1970:self.duration];
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"mm:ss"];
     return [dateFormatter stringFromDate:durationDate];
@@ -97,6 +120,18 @@ NSString * const PlaybackManagerDidPausePlayingNotification = @"PlaybackManagerD
 - (BOOL)isPlaying
 {
     return audioPlayer.playing;
+}
+
+#pragma mark - AVAudioPlayerDelegate
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:PlaybackManagerDidFinishPlayingNotification object:nil];
+}
+
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:PlaybackManagerErrorPlayingNotification object:nil];
 }
 
 @end

@@ -21,10 +21,11 @@
 		1F8E058417C0E2DA0079169D /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E058317C0E2DA0079169D /* RecorderViewController.m */; };
 		1F8F7A2917C28180008A3AB4 /* PlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F7A2817C28180008A3AB4 /* PlaybackManager.m */; };
 		1FCB388517C6637A00A9A13A /* recordingdatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388317C6637A00A9A13A /* recordingdatamodel.xcdatamodeld */; };
-		1FCB388817C6646B00A9A13A /* Recording.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388717C6646B00A9A13A /* Recording.m */; };
 		1FCB388B17C6669500A9A13A /* RecordingDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388A17C6669500A9A13A /* RecordingDatabase.m */; };
 		1FCB388D17C6673800A9A13A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCB388C17C6673800A9A13A /* CoreData.framework */; };
 		1FCB389017C679F900A9A13A /* RecordingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */; };
+		1FDB40DC17C9BC4400FA8C5B /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB40DB17C9BC4400FA8C5B /* Tag.m */; };
+		1FDB40DF17C9BC5200FA8C5B /* Recording.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB40DE17C9BC5200FA8C5B /* Recording.m */; };
 		78ECEDE717C7564300800F65 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78ECEDE617C7564300800F65 /* PlayerViewController.m */; };
 		78ECEDE917C75C4400800F65 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 78ECEDE817C75C4400800F65 /* Images */; };
 /* End PBXBuildFile section */
@@ -51,13 +52,15 @@
 		1F8F7A2717C28180008A3AB4 /* PlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackManager.h; sourceTree = "<group>"; };
 		1F8F7A2817C28180008A3AB4 /* PlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackManager.m; sourceTree = "<group>"; };
 		1FCB388417C6637A00A9A13A /* recordingdatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recordingdatamodel.xcdatamodel; sourceTree = "<group>"; };
-		1FCB388617C6646B00A9A13A /* Recording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recording.h; sourceTree = "<group>"; };
-		1FCB388717C6646B00A9A13A /* Recording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recording.m; sourceTree = "<group>"; };
 		1FCB388917C6669500A9A13A /* RecordingDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingDatabase.h; sourceTree = "<group>"; };
 		1FCB388A17C6669500A9A13A /* RecordingDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingDatabase.m; sourceTree = "<group>"; };
 		1FCB388C17C6673800A9A13A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1FCB388E17C679F900A9A13A /* RecordingHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingHistoryViewController.h; sourceTree = "<group>"; };
 		1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingHistoryViewController.m; sourceTree = "<group>"; };
+		1FDB40DA17C9BC4400FA8C5B /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		1FDB40DB17C9BC4400FA8C5B /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		1FDB40DD17C9BC5200FA8C5B /* Recording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recording.h; sourceTree = "<group>"; };
+		1FDB40DE17C9BC5200FA8C5B /* Recording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recording.m; sourceTree = "<group>"; };
 		78ECEDE517C7564300800F65 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		78ECEDE617C7564300800F65 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		78ECEDE817C75C4400800F65 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = VoicePrototype/Images; sourceTree = "<group>"; };
@@ -123,9 +126,11 @@
 				1F8E058317C0E2DA0079169D /* RecorderViewController.m */,
 				1F8F7A2717C28180008A3AB4 /* PlaybackManager.h */,
 				1F8F7A2817C28180008A3AB4 /* PlaybackManager.m */,
+				1FDB40DA17C9BC4400FA8C5B /* Tag.h */,
+				1FDB40DB17C9BC4400FA8C5B /* Tag.m */,
 				1FCB388317C6637A00A9A13A /* recordingdatamodel.xcdatamodeld */,
-				1FCB388617C6646B00A9A13A /* Recording.h */,
-				1FCB388717C6646B00A9A13A /* Recording.m */,
+				1FDB40DD17C9BC5200FA8C5B /* Recording.h */,
+				1FDB40DE17C9BC5200FA8C5B /* Recording.m */,
 				1FCB388E17C679F900A9A13A /* RecordingHistoryViewController.h */,
 				1FCB388F17C679F900A9A13A /* RecordingHistoryViewController.m */,
 				78ECEDE517C7564300800F65 /* PlayerViewController.h */,
@@ -220,10 +225,11 @@
 				1F8E058417C0E2DA0079169D /* RecorderViewController.m in Sources */,
 				1F8F7A2917C28180008A3AB4 /* PlaybackManager.m in Sources */,
 				1FCB388517C6637A00A9A13A /* recordingdatamodel.xcdatamodeld in Sources */,
-				1FCB388817C6646B00A9A13A /* Recording.m in Sources */,
 				1FCB388B17C6669500A9A13A /* RecordingDatabase.m in Sources */,
 				1FCB389017C679F900A9A13A /* RecordingHistoryViewController.m in Sources */,
 				78ECEDE717C7564300800F65 /* PlayerViewController.m in Sources */,
+				1FDB40DC17C9BC4400FA8C5B /* Tag.m in Sources */,
+				1FDB40DF17C9BC5200FA8C5B /* Recording.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

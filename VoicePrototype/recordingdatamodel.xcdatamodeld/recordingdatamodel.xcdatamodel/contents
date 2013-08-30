@@ -5,8 +5,13 @@
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Tag" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Recording" positionX="-17514" positionY="-7758" width="128" height="103"/>
+        <element name="Recording" positionX="-17514" positionY="-7758" width="128" height="120"/>
+        <element name="Tag" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>

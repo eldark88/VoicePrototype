@@ -57,16 +57,13 @@
     if (audioRecorder.recording) {
         [audioRecorder stop];
     }
-    
-    [self createAudioRecorder];
+    if (!pausedTime) {
+        [self createAudioRecorder];
+    }
     
     NSLog(@"audioRecorder.currentTime = %f", pausedTime);
-    if (pausedTime) {
-        [audioRecorder recordAtTime: pausedTime];
-    }
-    else {
-        [audioRecorder record];
-    }
+
+    [audioRecorder record];
 }
 
 - (void)stopRecording
@@ -109,7 +106,7 @@
 
 - (NSTimeInterval)recordingTime
 {
-    return pausedTime + audioRecorder.currentTime;
+    return audioRecorder.currentTime;
 }
 
 -(NSString *)recordingTimeString

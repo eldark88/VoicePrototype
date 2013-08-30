@@ -101,9 +101,10 @@
     
     playerViewController = [[PlayerViewController alloc] init];
     CGRect frame = playerViewController.view.frame;
-    frame.size.height = 100.0f;
-    frame.origin.y = 480.0f - frame.size.height;
+    frame.size.height = 80.0f;
+    frame.origin.y = 480.0f;
     playerViewController.view.frame = frame;
+    playerViewController.view.hidden = YES;
     
     [self.view addSubview:playerViewController.view];
 }
@@ -148,6 +149,23 @@
 #pragma mark - Delegate
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (playerViewController.view.hidden) {
+        playerViewController.view.hidden = NO;
+        [UIView animateWithDuration:0.3f animations:^{
+            CGRect frame = playerViewController.view.frame;
+            frame.origin.y = 480.0f - frame.size.height;
+            playerViewController.view.frame = frame;
+            
+            
+            CGRect tableViewFrame = tableView.frame;
+            tableViewFrame.size.height -= 80.0f;
+            tableView.frame = tableViewFrame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+
     Recording *recording = [recordings objectAtIndex:indexPath.row];
     
     [[PlaybackManager sharedManager] playWithURL:[NSURL URLWithString:recording.url]];
