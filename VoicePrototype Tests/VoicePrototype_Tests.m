@@ -26,9 +26,14 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testTrue
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertTrue(true, @"true is true");
+}
+
+- (void)testFalse
+{
+    XCTAssertFalse(false, @"false is false");
 }
 
 @end
