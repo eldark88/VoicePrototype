@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1D9E730318888409008C740E"
+               BuildableName = "VoicePrototype Tests.xctest"
+               BlueprintName = "VoicePrototype Tests"
+               ReferencedContainer = "container:VoicePrototype.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

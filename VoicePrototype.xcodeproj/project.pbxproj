@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1D9E72FF18886E5C008C740E /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E72FE18886E5C008C740E /* Tag.m */; };
+		1D9E730718888409008C740E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055617C0C8A00079169D /* Foundation.framework */; };
+		1D9E730818888409008C740E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055417C0C8A00079169D /* UIKit.framework */; };
+		1D9E730E18888409008C740E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D9E730C18888409008C740E /* InfoPlist.strings */; };
+		1D9E731018888409008C740E /* VoicePrototype_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E730F18888409008C740E /* VoicePrototype_Tests.m */; };
+		1D9E731A1888852F008C740E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9E73191888852F008C740E /* XCTest.framework */; };
 		1F8E055517C0C8A00079169D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055417C0C8A00079169D /* UIKit.framework */; };
 		1F8E055717C0C8A00079169D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055617C0C8A00079169D /* Foundation.framework */; };
 		1F8E055917C0C8A00079169D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055817C0C8A00079169D /* CoreGraphics.framework */; };
@@ -30,9 +35,25 @@
 		78ECEDE917C75C4400800F65 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 78ECEDE817C75C4400800F65 /* Images */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1D9E731218888409008C740E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F8E054917C0C8A00079169D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F8E055017C0C8A00079169D;
+			remoteInfo = VoicePrototype;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D9E72FD18886E5C008C740E /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		1D9E72FE18886E5C008C740E /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		1D9E730418888409008C740E /* VoicePrototype Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VoicePrototype Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D9E730B18888409008C740E /* VoicePrototype Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VoicePrototype Tests-Info.plist"; sourceTree = "<group>"; };
+		1D9E730D18888409008C740E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D9E730F18888409008C740E /* VoicePrototype_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoicePrototype_Tests.m; sourceTree = "<group>"; };
+		1D9E731118888409008C740E /* VoicePrototype Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoicePrototype Tests-Prefix.pch"; sourceTree = "<group>"; };
+		1D9E73191888852F008C740E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1F8E055117C0C8A00079169D /* VoicePrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoicePrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8E055417C0C8A00079169D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F8E055617C0C8A00079169D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +88,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D9E730118888409008C740E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E731A1888852F008C740E /* XCTest.framework in Frameworks */,
+				1D9E730818888409008C740E /* UIKit.framework in Frameworks */,
+				1D9E730718888409008C740E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F8E054E17C0C8A00079169D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,11 +113,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D9E730918888409008C740E /* VoicePrototype Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E730F18888409008C740E /* VoicePrototype_Tests.m */,
+				1D9E730A18888409008C740E /* Supporting Files */,
+			);
+			path = "VoicePrototype Tests";
+			sourceTree = "<group>";
+		};
+		1D9E730A18888409008C740E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E730B18888409008C740E /* VoicePrototype Tests-Info.plist */,
+				1D9E730C18888409008C740E /* InfoPlist.strings */,
+				1D9E731118888409008C740E /* VoicePrototype Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1F8E054817C0C8A00079169D = {
 			isa = PBXGroup;
 			children = (
 				78ECEDE817C75C4400800F65 /* Images */,
 				1F8E055A17C0C8A00079169D /* VoicePrototype */,
+				1D9E730918888409008C740E /* VoicePrototype Tests */,
 				1F8E055317C0C8A00079169D /* Frameworks */,
 				1F8E055217C0C8A00079169D /* Products */,
 			);
@@ -96,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8E055117C0C8A00079169D /* VoicePrototype.app */,
+				1D9E730418888409008C740E /* VoicePrototype Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +155,7 @@
 		1F8E055317C0C8A00079169D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D9E73191888852F008C740E /* XCTest.framework */,
 				1FCB388C17C6673800A9A13A /* CoreData.framework */,
 				1F8E058017C0D8900079169D /* AVFoundation.framework */,
 				1F8E055417C0C8A00079169D /* UIKit.framework */,
@@ -156,6 +209,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1D9E730318888409008C740E /* VoicePrototype Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D9E731618888409008C740E /* Build configuration list for PBXNativeTarget "VoicePrototype Tests" */;
+			buildPhases = (
+				1D9E730018888409008C740E /* Sources */,
+				1D9E730118888409008C740E /* Frameworks */,
+				1D9E730218888409008C740E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D9E731318888409008C740E /* PBXTargetDependency */,
+			);
+			name = "VoicePrototype Tests";
+			productName = "VoicePrototype Tests";
+			productReference = 1D9E730418888409008C740E /* VoicePrototype Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1F8E055017C0C8A00079169D /* VoicePrototype */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F8E057A17C0C8A00079169D /* Build configuration list for PBXNativeTarget "VoicePrototype" */;
@@ -182,6 +253,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = FlowTelligent;
 				TargetAttributes = {
+					1D9E730318888409008C740E = {
+						TestTargetID = 1F8E055017C0C8A00079169D;
+					};
 					1F8E055017C0C8A00079169D = {
 						DevelopmentTeam = 6JWC4JNM8L;
 					};
@@ -200,11 +274,20 @@
 			projectRoot = "";
 			targets = (
 				1F8E055017C0C8A00079169D /* VoicePrototype */,
+				1D9E730318888409008C740E /* VoicePrototype Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D9E730218888409008C740E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E730E18888409008C740E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F8E054F17C0C8A00079169D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +303,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D9E730018888409008C740E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E731018888409008C740E /* VoicePrototype_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F8E054D17C0C8A00079169D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,7 +331,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1D9E731318888409008C740E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F8E055017C0C8A00079169D /* VoicePrototype */;
+			targetProxy = 1D9E731218888409008C740E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1D9E730C18888409008C740E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D9E730D18888409008C740E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		1F8E055D17C0C8A00079169D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -252,6 +359,67 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1D9E731418888409008C740E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VoicePrototype.app/VoicePrototype";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoicePrototype Tests/VoicePrototype Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "VoicePrototype Tests/VoicePrototype Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1D9E731518888409008C740E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VoicePrototype.app/VoicePrototype";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VoicePrototype Tests/VoicePrototype Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "VoicePrototype Tests/VoicePrototype Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		1F8E057817C0C8A00079169D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -312,6 +480,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoicePrototype/VoicePrototype-Prefix.pch";
 				INFOPLIST_FILE = "VoicePrototype/VoicePrototype-Info.plist";
@@ -325,6 +497,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoicePrototype/VoicePrototype-Prefix.pch";
 				INFOPLIST_FILE = "VoicePrototype/VoicePrototype-Info.plist";
@@ -337,6 +513,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D9E731618888409008C740E /* Build configuration list for PBXNativeTarget "VoicePrototype Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D9E731418888409008C740E /* Debug */,
+				1D9E731518888409008C740E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1F8E054C17C0C8A00079169D /* Build configuration list for PBXProject "VoicePrototype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
