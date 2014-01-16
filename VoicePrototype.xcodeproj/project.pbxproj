@@ -181,6 +181,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = FlowTelligent;
+				TargetAttributes = {
+					1F8E055017C0C8A00079169D = {
+						DevelopmentTeam = 6JWC4JNM8L;
+					};
+				};
 			};
 			buildConfigurationList = 1F8E054C17C0C8A00079169D /* Build configuration list for PBXProject "VoicePrototype" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -306,6 +311,7 @@
 		1F8E057B17C0C8A00079169D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoicePrototype/VoicePrototype-Prefix.pch";
 				INFOPLIST_FILE = "VoicePrototype/VoicePrototype-Info.plist";
@@ -317,6 +323,7 @@
 		1F8E057C17C0C8A00079169D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoicePrototype/VoicePrototype-Prefix.pch";
 				INFOPLIST_FILE = "VoicePrototype/VoicePrototype-Info.plist";
