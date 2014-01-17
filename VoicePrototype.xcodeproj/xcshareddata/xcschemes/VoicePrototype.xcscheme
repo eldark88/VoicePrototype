@@ -25,7 +25,7 @@
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldUseLaunchSchemeArgsEnv = "NO"
       buildConfiguration = "Debug">
       <Testables>
          <TestableReference
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8E055017C0C8A00079169D"
-            BuildableName = "VoicePrototype.app"
-            BlueprintName = "VoicePrototype"
+            BlueprintIdentifier = "1D9E730318888409008C740E"
+            BuildableName = "VoicePrototype Tests.xctest"
+            BlueprintName = "VoicePrototype Tests"
             ReferencedContainer = "container:VoicePrototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
