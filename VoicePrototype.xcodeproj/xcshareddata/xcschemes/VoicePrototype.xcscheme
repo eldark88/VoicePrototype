@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D9E730318888409008C740E"
+               BlueprintIdentifier = "1DFD5B0C1888CFAC003F9B2A"
                BuildableName = "VoicePrototype Tests.xctest"
                BlueprintName = "VoicePrototype Tests"
                ReferencedContainer = "container:VoicePrototype.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D9E730318888409008C740E"
+            BlueprintIdentifier = "1DFD5B0C1888CFAC003F9B2A"
             BuildableName = "VoicePrototype Tests.xctest"
             BlueprintName = "VoicePrototype Tests"
             ReferencedContainer = "container:VoicePrototype.xcodeproj">
