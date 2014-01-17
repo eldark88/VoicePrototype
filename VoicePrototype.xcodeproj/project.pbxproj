@@ -11,9 +11,9 @@
 		1DFD5B0F1888CFAC003F9B2A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD5B0E1888CFAC003F9B2A /* XCTest.framework */; };
 		1DFD5B101888CFAC003F9B2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055617C0C8A00079169D /* Foundation.framework */; };
 		1DFD5B111888CFAC003F9B2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055417C0C8A00079169D /* UIKit.framework */; };
-		1DFD5B171888CFAC003F9B2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DFD5B151888CFAC003F9B2A /* InfoPlist.strings */; };
 		1DFD5B191888CFAC003F9B2A /* VoicePrototype_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD5B181888CFAC003F9B2A /* VoicePrototype_Tests.m */; };
-		1DFD5B211888D00A003F9B2A /* VoicePrototype Tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFD5B201888D00A003F9B2A /* VoicePrototype Tests-Info.plist */; };
+		1DFD5B241888D10E003F9B2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DFD5B221888D10E003F9B2A /* InfoPlist.strings */; };
+		1DFD5B261888D12C003F9B2A /* VoicePrototype Tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFD5B251888D12C003F9B2A /* VoicePrototype Tests-Info.plist */; };
 		1F8E055517C0C8A00079169D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055417C0C8A00079169D /* UIKit.framework */; };
 		1F8E055717C0C8A00079169D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055617C0C8A00079169D /* Foundation.framework */; };
 		1F8E055917C0C8A00079169D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8E055817C0C8A00079169D /* CoreGraphics.framework */; };
@@ -51,10 +51,10 @@
 		1D9E72FE18886E5C008C740E /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		1DFD5B0D1888CFAC003F9B2A /* VoicePrototype Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VoicePrototype Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFD5B0E1888CFAC003F9B2A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1DFD5B161888CFAC003F9B2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DFD5B181888CFAC003F9B2A /* VoicePrototype_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoicePrototype_Tests.m; sourceTree = "<group>"; };
 		1DFD5B1A1888CFAC003F9B2A /* VoicePrototype Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VoicePrototype Tests-Prefix.pch"; path = "VoicePrototype Tests/VoicePrototype Tests-Prefix.pch"; sourceTree = "<group>"; };
-		1DFD5B201888D00A003F9B2A /* VoicePrototype Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "VoicePrototype Tests-Info.plist"; path = "VoicePrototype Tests/VoicePrototype Tests-Info.plist"; sourceTree = "<group>"; };
+		1DFD5B231888D10E003F9B2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DFD5B251888D12C003F9B2A /* VoicePrototype Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VoicePrototype Tests-Info.plist"; sourceTree = "<group>"; };
 		1F8E055117C0C8A00079169D /* VoicePrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoicePrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8E055417C0C8A00079169D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F8E055617C0C8A00079169D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,8 +126,8 @@
 		1DFD5B131888CFAC003F9B2A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1DFD5B201888D00A003F9B2A /* VoicePrototype Tests-Info.plist */,
-				1DFD5B151888CFAC003F9B2A /* InfoPlist.strings */,
+				1DFD5B251888D12C003F9B2A /* VoicePrototype Tests-Info.plist */,
+				1DFD5B221888D10E003F9B2A /* InfoPlist.strings */,
 				1DFD5B1A1888CFAC003F9B2A /* VoicePrototype Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -285,8 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DFD5B171888CFAC003F9B2A /* InfoPlist.strings in Resources */,
-				1DFD5B211888D00A003F9B2A /* VoicePrototype Tests-Info.plist in Resources */,
+				1DFD5B241888D10E003F9B2A /* InfoPlist.strings in Resources */,
+				1DFD5B261888D12C003F9B2A /* VoicePrototype Tests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +342,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1DFD5B151888CFAC003F9B2A /* InfoPlist.strings */ = {
+		1DFD5B221888D10E003F9B2A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DFD5B161888CFAC003F9B2A /* en */,
+				1DFD5B231888D10E003F9B2A /* en */,
 			);
 			name = InfoPlist.strings;
-			path = "VoicePrototype Tests";
 			sourceTree = "<group>";
 		};
 		1F8E055D17C0C8A00079169D /* InfoPlist.strings */ = {
