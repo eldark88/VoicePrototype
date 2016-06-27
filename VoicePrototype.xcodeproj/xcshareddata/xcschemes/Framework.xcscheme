@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8E055017C0C8A00079169D"
-               BuildableName = "VoicePrototype.app"
-               BlueprintName = "VoicePrototype"
+               BlueprintIdentifier = "7882FE171D2167130038F30E"
+               BuildableName = "Framework.framework"
+               BlueprintName = "Framework"
                ReferencedContainer = "container:VoicePrototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,15 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "NO">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1DFD5B0C1888CFAC003F9B2A"
-               BuildableName = "VoicePrototype Tests.xctest"
-               BlueprintName = "VoicePrototype Tests"
+               BlueprintIdentifier = "7882FE201D2167130038F30E"
+               BuildableName = "FrameworkTests.xctest"
+               BlueprintName = "FrameworkTests"
                ReferencedContainer = "container:VoicePrototype.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1DFD5B0C1888CFAC003F9B2A"
-            BuildableName = "VoicePrototype Tests.xctest"
-            BlueprintName = "VoicePrototype Tests"
+            BlueprintIdentifier = "7882FE171D2167130038F30E"
+            BuildableName = "Framework.framework"
+            BlueprintName = "Framework"
             ReferencedContainer = "container:VoicePrototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8E055017C0C8A00079169D"
-            BuildableName = "VoicePrototype.app"
-            BlueprintName = "VoicePrototype"
+            BlueprintIdentifier = "7882FE171D2167130038F30E"
+            BuildableName = "Framework.framework"
+            BlueprintName = "Framework"
             ReferencedContainer = "container:VoicePrototype.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8E055017C0C8A00079169D"
-            BuildableName = "VoicePrototype.app"
-            BlueprintName = "VoicePrototype"
+            BlueprintIdentifier = "7882FE171D2167130038F30E"
+            BuildableName = "Framework.framework"
+            BlueprintName = "Framework"
             ReferencedContainer = "container:VoicePrototype.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
